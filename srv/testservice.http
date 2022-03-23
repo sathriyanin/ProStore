@@ -1,0 +1,10 @@
+GET http://localhost:4004/sap/opu/odata/sap/API_GS_SRV/ProductSet
+###
+POST http://localhost:4004/sap/opu/odata/sap/API_GS_SRV/ProductSet
+Content-Type: application/json
+
+{
+   "pid":1011,"pname":"TV",
+   "unit":"Number","unitprice":500,
+   "stock":"X"
+}

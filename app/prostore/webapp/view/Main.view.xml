@@ -1,0 +1,78 @@
+<mvc:View
+    controllerName="com.store.prostore.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <f:SimpleForm
+                            layout="ResponsiveGridLayout"
+                            title="IBM Departmental Store">
+                            <f:content>
+                                <Label text="Name" />
+                                <Text id="nameText" text="Sathriyan Mahalingam" />
+                                <Label text="Street/No." />
+                                <Text text="No 14, SVR Road, Dharmapuri" />
+                                <Label text="PIN Code/City" />
+                                <Text text="636703, Dharmapuri" />
+                                <Label text="State" />
+                                <Text text="Tamilnadu" />
+                                <Label text="Country" />
+                                <Text id="countryText" text="India" />
+                            </f:content>
+                        </f:SimpleForm>
+                        <Table items="{path: '/ProductSet'}">
+                            <columns>
+                                <Column width="12em">
+                                    <Text text="ID" />
+                                </Column>
+                                <Column >
+                                    <Text text="Product" />
+                                </Column>
+                                <Column >
+                                    <Text text="Required" />
+                                </Column>
+                                <Column >
+                                    <Text text="Quantity" />
+                                </Column> 
+                                <Column >
+                                    <Text text="Unit" />
+                                </Column>
+                                <Column >
+                                    <Text text="Unit Price" />
+                                </Column>                                                               
+                                <Column >
+                                    <Text text="Price" />
+                                </Column>                                 
+                            </columns>
+                            <items>
+                                <ColumnListItem>
+                                    <cells>
+                                        <Text text="{pid}" />
+                                        <Text text="{pname}" />
+                                        <CheckBox />
+                                        <Input value="{test}" />
+                                        <Text text="{unit}" />
+                                        <Text text="{unitprice}" />
+                                        <Text text="{test}" />  
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </content>
+                    <footer>
+			            <OverflowToolbar>
+				            <ToolbarSpacer/>
+                            <Button text="Create" type="Accept" />
+                            <Button text="Save Draft" type="Emphasized"/>
+                            <Button text="Cancel" type="Reject" />
+                        </OverflowToolbar>
+		            </footer>                    
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
